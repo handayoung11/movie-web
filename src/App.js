@@ -24,6 +24,12 @@ function App() {
       <form onSubmit={onSubmit}>
         <input type="text" value={toDo} onChange={onChange} />
         <button>Add To Do</button>
+        <hr />
+        <ul>
+          {toDos.map((toDo, idx) => {
+            return <li key={idx}>{toDo}</li>;
+          })}
+        </ul>
       </form>
     </div>
   );
